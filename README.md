@@ -17,6 +17,7 @@ Route based versioning has been considered in the architecture to let the develo
 ## Out of scope
 
 No unit testing has been done, but ease of unit testing has been considered hence Clean architecture has been used. XUnit & Moq can be used to perform unit testing.
+
 Negative test cases and fixes around it.
 
 ## Technology Stack
