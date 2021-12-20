@@ -54,8 +54,8 @@ namespace ExchangeRateAPI.Repositories
 
             }
             ExchangeRateMovementResponse result = new ExchangeRateMovementResponse();
-            var minRateRecord = exchangeRateData.OrderByDescending(x=>x.ExchangeRate).First();
-            var maxRateRecord = exchangeRateData.OrderBy(x => x.ExchangeRate).First();
+            var maxRateRecord = exchangeRateData.OrderByDescending(x=>x.ExchangeRate).First();
+            var minRateRecord = exchangeRateData.OrderBy(x => x.ExchangeRate).First();
             var average = exchangeRateData.Average(x => x.ExchangeRate);
             result.AverageRate = average;
             result.MinimumReached = minRateRecord.ExchangeRate;
