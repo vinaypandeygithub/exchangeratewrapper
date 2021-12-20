@@ -101,11 +101,11 @@ Negative test cases and fixes around it.
 ### Response
 ```
 {
-  "maximumReachedOnDate": "2021-01-01T00:00:00",
-  "minumumReachedOnDate": "2021-02-19T00:00:00",
-  "maximumReached": 1.323114,
-  "minimumReached": 1.381467,
-  "averageRate": 1.3530947796610162
+  "maximumReachedOnDate": "2021-02-19T00:00:00",
+  "minumumReachedOnDate": "2021-01-01T00:00:00",
+  "maximumReached": 1.381467,
+  "minimumReached": 1.322079,
+  "averageRate": 1.3527790169491527
 }
 ```
 
