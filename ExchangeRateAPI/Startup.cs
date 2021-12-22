@@ -13,6 +13,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MassTransit;
 
 namespace ExchangeRateAPI
 {
@@ -28,6 +29,11 @@ namespace ExchangeRateAPI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            // Redis Configuration
+            services.AddStackExchangeRedisCache(options =>
+            {
+                options.Configuration = Configuration.GetValue<string>("CacheSettings:ConnectionString");
+            });
             services.AddHttpClient<IForexExchangeRepository, ForexExchangeRepository>(c =>
                c.BaseAddress = new Uri(Configuration["ApiSettings:ExternalExchangeRateURL"]));
             services.AddMemoryCache();
